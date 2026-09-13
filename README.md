@@ -79,7 +79,7 @@ Par la suite j'ai effectué une préparation des données m'assurant au préalab
 ---
 
 ## 🤖 Modèles entraînés
-Avant l'entrainement du modèle, 2 modèles me semblaient les plus adaptés pour le problème, compte tenu de la quantité de données mais aussi du fait qu'on devait classer deux catégories très déséquilibrées Deux modèles linéaires adaptés aux grands volumes :
+Avant l'entrainement du modèle, 2 modèles me semblaient les plus adaptés pour le problème, compte tenu de la quantité de données mais aussi du fait qu'on devait classer deux catégories très déséquilibrées. Les deux modèles linéaires adaptés aux grands volumes sont :
 
 ### **1. Logistic Regression**
 - `class_weight='balanced'`  
@@ -122,18 +122,16 @@ Ce recall élevé sur la classe minoritaire est essentiel pour un cas de churn e
 ---
 
 ## 💰 Analyse métier : Revenu à Risque
-
+Sur la base des prédictions, j'ai pu obtenir les probabilités pour chaque client de se désabonner. Cela m'a permis d'estimer
+quel serait le revenu potentiel (RevenueAtRisk) que la compagnie pourrait perdre si des clients résiliaient leur abonnement.
 Pour chaque client du test :
 
-
-
-\[
-\text{RevenueAtRisk} = P(\text{churn}) \times \text{MonthlyCharges}
-\]
-
+RevenueAtRisk = Probabilité(churn = 1) x MonthlyCharges
 
 
 ### Résultats :
+Nous avons pu obtenir le montant total mensuel espéré que la compagnie pourrait perdre si aucune campagne de rétention était
+faite. Par la suite j'ai classé ces revenus par ordre décroissant pour pouvoir faire ressortir les 20 clients les plus susceptibles de se désabonner.
 - **Revenu mensuel total à risque : 279 691 $**
 - Liste des **20 clients prioritaires** générée automatiquement
 
