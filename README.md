@@ -53,7 +53,9 @@ Le churn est **déséquilibré** :
 
 ### Insights clés :
 - Les clients **Basic** ont le taux de churn le plus élevé (~19.6 %).  
+![Churn Rate par type de souscription](images/churn_rate_souscription.png)
 - Les churners regardent **moins de contenu** (17.4 h/semaine vs 21.2 h).  
+![Heures de visualisation par churners](images/visualisation_churn.png)
 - Les comptes plus récents churnent davantage (45.7 mois vs 63.3 mois).
 
 Visualisations incluses :
@@ -151,7 +153,8 @@ Top variables influençant le churn :
 - `MonthlyCharges`  
 - `SupportTicketsPerMonth`  
 - `ContentDownloadsPerMonth`  
-- Certaines catégories OneHot (type d’abonnement, méthode de paiement)
+
+![Features les plus influents](images/top_features.png)
 
 Graphique inclus dans le notebook.
 
