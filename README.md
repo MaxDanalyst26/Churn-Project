@@ -50,23 +50,23 @@ Le churn est **déséquilibré** :
 ---
 
 ## 🔍 Exploration des données (EDA)
+Avant de débuter le projet, j'ai pris le temps d'explorer les données et de faire ressortir les premiers insights clés qui pourraient nous permettre de déceler la clientèle la plus à risque.
 
 ### Insights clés :
 - Les clients **Basic** ont le taux de churn le plus élevé (~19.6 %).  
-![Churn Rate par type de souscription](images/churn_rate_souscription.png)
-- Les churners regardent **moins de contenu** (17.4 h/semaine vs 21.2 h).  
-![Heures de visualisation par churners](images/visualisation_churn.png)
-- Les comptes plus récents churnent davantage (45.7 mois vs 63.3 mois).
 
-Visualisations incluses :
-- Boxplots  
-- Barplots  
-- Matrices de corrélation  
-- Distribution des variables clés  
+![Churn Rate par type de souscription](images/churn_rate_souscription.png)
+
+- Les churners regardent **moins de contenu** (17.4 h/semaine vs 21.2 h).  
+
+![Heures de visualisation par churners](images/visualisation_churn.png)
+
+- Les comptes plus récents churnent davantage (45.7 mois vs 63.3 mois).
 
 ---
 
 ## 🛠️ Préparation des données
+Par la suite j'ai effectué une préparation des données m'assurant au préalable que les données étaient propres, sans doublons et sans valeurs manquantes.
 
 ### Étapes principales :
 - Suppression de `CustomerID`
@@ -74,13 +74,12 @@ Visualisations incluses :
 - Standardisation des variables numériques (StandardScaler)
 - Reconstruction du dataset final :  
   **colonnes numériques scalées + colonnes OneHot**
-- Split train/test : 80 % / 20 %
+- Séparation de l'echantillon train/test : 80 % / 20 %
 
 ---
 
 ## 🤖 Modèles entraînés
-
-Deux modèles linéaires adaptés aux grands volumes :
+Avant l'entrainement du modèle, 2 modèles me semblaient les plus adaptés pour le problème, compte tenu de la quantité de données mais aussi du fait qu'on devait classer deux catégories très déséquilibrées Deux modèles linéaires adaptés aux grands volumes :
 
 ### **1. Logistic Regression**
 - `class_weight='balanced'`  
@@ -109,22 +108,20 @@ Deux modèles linéaires adaptés aux grands volumes :
 - AUC : **0.71**
 
 👉 **Modèle retenu : Logistic Regression**  
-Car il offre le meilleur compromis entre recall, stabilité et interprétabilité.
+Mon choix s'est porté sur le modèle de régression logistique car il offre le meilleur compromis entre recall, stabilité et interprétabilité.
 
 ---
 
 ## 📉 Matrice de confusion
-
-Le modèle identifie correctement :
-
+On constate que le modèle de régression logistique permet de saisir correctement:
 - **68 %** des clients qui restent  
 - **69 %** des clients qui churnent  
 
-Ce recall élevé sur la classe minoritaire est essentiel pour un cas métier de churn.
+Ce recall élevé sur la classe minoritaire est essentiel pour un cas de churn en entreprise.
 
 ---
 
-## 💰 Analyse métier : Revenue at Risk
+## 💰 Analyse métier : Revenu à Risque
 
 Pour chaque client du test :
 
