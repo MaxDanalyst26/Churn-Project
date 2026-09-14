@@ -175,16 +175,12 @@ Graphique inclus dans le notebook.
 
 ---
 
-## 🏁 Conclusion
+## 🏁 Limitations
 
 Ce projet démontre une approche complète de prédiction du churn :
 
-- Analyse exploratoire  
-- Préparation des données  
-- Modélisation  
-- Évaluation  
-- Interprétation  
-- Analyse métier (revenue at risk)
+- Le déséquilibre des classes a tendance à rendre les modèles trompeusement performants en accuracy, mais mauvais pour détecter les churners.
+- Les habitudes de consommation evoluants avec le temps, le modèle peut devenir rapidement obsolète.
 
 
 
