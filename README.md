@@ -28,6 +28,7 @@ Elles ont été partagées en trois fichiers "test.csv", "train.csv", "data_desc
 Le dataset contient **243 787 clients** et **21 variables**, incluant :
 
 
+
 | Column Name                 | Type        | Data Type | Description |
 |-----------------------------|-------------|-----------|-------------|
 | AccountAge                  | Feature     | integer   | The age of the user's account in months. |
