@@ -22,11 +22,11 @@ Elles ont été partagées en trois fichiers "test.csv", "train.csv", "data_desc
 <h3>📥 Données disponibles sur Kaggle :</h3>
 <p>
   <a href="https://www.kaggle.com/datasets/safrin03/predictive-analytics-for-customer-churn-dataset?utm_source=karina-datascientist.beehiiv.com&utm_medium=newsletter&utm_campaign=let-s-build-a-churn-prediction-model-together" target="_blank">
-    👉 Cliquez ici
+      👉 Cliquez ici
   </a>
 </p>
 Le dataset contient **243 787 clients** et **21 variables**, incluant :
-Données
+
 
 | Column Name                 | Type        | Data Type | Description |
 |-----------------------------|-------------|-----------|-------------|
