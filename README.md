@@ -158,6 +158,7 @@ Top variables influençant le churn :
 - `MonthlyCharges`  
 - `SupportTicketsPerMonth`  
 - `ContentDownloadsPerMonth`  
+Ces variables nous donnent des indicateurs crédibles pour déceler si un client est plus ou moins enclin à se désabonner.
 
 ![Features les plus influents](images/top_features.png)
 
@@ -169,9 +170,6 @@ Graphique inclus dans le notebook.
 
 - Tester des modèles non linéaires (XGBoost, LightGBM, CatBoost)
 - Feature engineering (ratios, interactions)
-- Calibration des probabilités
-- Optimisation du seuil de classification selon le coût métier
-- Déploiement API (FastAPI)
 
 ---
 
